@@ -1,0 +1,62 @@
+<div class="container">
+  
+
+  <form class="row mt-3 gx-3 gy-2 align-items-center justify-content-center">
+    <div class="col-sm-6">
+      <label for="specificSizeInputName" class="visually-hidden">Desejo</label>
+      <input type="text" name="new-wish-text" class="form-control" [(ngModel)]="newWishText">
+    </div>
+    <div class="col-auto">
+      <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="$event.preventDefault();addNewWish()"
+      >
+      Adicionar Desejo
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf="items.length === 0">
+    Não há wishes para serem mostrados
+  </div>
+   
+  <ul class="wish-list">
+    <li *ngFor="let item of items; index as ii">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input 
+          type="checkbox" 
+          class="checkbox"
+          [checked]="item.isComplete"
+          [attr.data-index]="ii"
+          (click)="toggleItem(item)"          
+          > {{item.wishText}}
+           
+        </label>
+      
+      </div>
+    </li>
+  </ul>
+
+  
+</div>
+
+<!-- Utilizando Templates -->
+<!-- <div *ngIf="items.length === 0; then noItems else showItems" ></div>
+  
+  <ng-template #noItems>
+    Não há wishes para serem mostrados
+  </ng-template>
+
+  <ng-template #showItems>
+    <ul class="wish-list">
+      <li *ngFor="let item of items">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="checkbox"> {{item.wishText}}
+          </label>
+        </div>
+      </li>
+    </ul>
+  </ng-template> -->

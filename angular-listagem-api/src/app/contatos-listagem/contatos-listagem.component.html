@@ -1,0 +1,22 @@
+<p>contatos-listagem works!</p>
+
+<ul *ngIf="contatos">
+  <li *ngFor="let c of contatos">
+    <strong>CPF:</strong> {{c.cpf}}<br>
+    <strong>Nome:</strong> {{c.nome}}<br>
+    <strong>Email:</strong> {{c.email}}<br>
+    <strong>Cliente ID:</strong> {{c.cliente_id}}<br>
+    <strong>Endereço:</strong> <br>
+    <ul>
+      <li><strong>Endereço ID:</strong> {{c.endereco.endereco_id}}</li>
+      <li><strong>CEP:</strong> {{c.endereco.cep}}</li>
+      <li><strong>Estado:</strong> {{c.endereco.estado}}</li>
+      <li><strong>Cidade:</strong> {{c.endereco.cidade}}</li>
+      <li><strong>Bairro:</strong> {{c.endereco.bairro}}</li>
+      <li><strong>Rua:</strong> {{c.endereco.rua}}</li>
+      <li><strong>Número:</strong> {{c.endereco.numero}}</li>
+      <li><strong>Complemento:</strong> {{c.endereco.complemento || 'Nenhum'}}</li>
+    </ul>
+    <hr>
+  </li>
+</ul>
