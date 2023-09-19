@@ -1,0 +1,15 @@
+<div *ngIf="wishes.length === 0">
+    Não há wishes para serem mostrados
+  </div>
+
+  <ul class="wish-list">
+    <li *ngFor="let item of wishes; index as ii">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="checkbox" type="checkbox"
+            [attr.data-index]="ii"
+            [checked]="item.isComplete"
+            (click)="toggleComplete(item);">&ThickSpace; {{item.text}}</label>
+      </div>
+    </li>
+  </ul>
