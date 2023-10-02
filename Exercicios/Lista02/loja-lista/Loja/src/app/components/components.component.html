@@ -1,0 +1,12 @@
+<div>
+  <button (click)="getItens()" class="btn btn-primary">Get all itens</button>
+  <ul style="display: flex;">
+    <li *ngFor="let i of listaItens" class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h1 class="card-title">{{i.nome}}</h1>
+        <p class="card-text">{{i.descricao}}</p>
+        <p class="card-text">{{i.preco}}</p>
+      </div>
+    </li>
+  </ul>
+</div>

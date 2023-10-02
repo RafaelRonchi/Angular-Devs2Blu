@@ -1,0 +1,28 @@
+{
+  "carros": [
+    {
+      "id": 1,
+      "modelo": "Fusca",
+      "marca": "Volskwagen",
+      "ano": 2023
+    },
+    {
+      "id": 2,
+      "modelo": "Kombi",
+      "marca": "Volskwagen",
+      "ano": 1974
+    },
+    {
+      "modelo": "Uno",
+      "marca": "Fiat",
+      "ano": 2005,
+      "id": 3
+    },
+    {
+      "modelo": "Fusca",
+      "marca": "Volskwagen",
+      "ano": 2024,
+      "id": 4
+    }
+  ]
+}

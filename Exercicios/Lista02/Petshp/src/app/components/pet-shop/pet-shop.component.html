@@ -1,0 +1,14 @@
+<form [formGroup]="petForm" (ngSubmit)="addPet()">
+  <input type="text" placeholder="name" formControlName="name">
+  <input type="text" placeholder="price" formControlName="price">
+
+  <button type="submit">Submit</button>
+</form>
+
+<button (click)="getPets()">Get All Pets</button>
+<ul>
+  <li *ngFor="let i of listaPets">
+    {{i.id}} - {{i.name}} - {{i.price}}
+  <button (click)="delPet(i.id)">Delete</button>
+  </li>
+</ul>

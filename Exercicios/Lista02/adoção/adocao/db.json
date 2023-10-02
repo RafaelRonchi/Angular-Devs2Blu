@@ -1,0 +1,16 @@
+{
+  "adocao": [
+    {
+      "id": 1,
+      "tipo": "gato",
+      "nome": "miau",
+      "idade": 6
+    },
+    {
+      "id": 2,
+      "tipo": "cachorro",
+      "nome": "auau",
+      "idade": 2
+    }
+  ]
+}

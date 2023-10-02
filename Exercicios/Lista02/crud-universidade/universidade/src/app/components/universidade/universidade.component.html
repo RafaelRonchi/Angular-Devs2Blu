@@ -1,0 +1,20 @@
+<form action="" [formGroup]="form"  (ngSubmit)="addCurso()">
+    <input type="text" placeholder="nome" formControlName="nome" >
+    <input type="number" placeholder="descricao" formControlName="descricao">
+    <input type="text" placeholder="valor" formControlName="valor">
+    <input type="text" placeholder="alunos" formControlName="alunos">
+
+    <button type="submit">Cadastrar curso</button>
+</form>
+
+<h1>Lista de cursos</h1>
+<ul>
+    <li *ngFor="let curso of listaCursos">
+        <h2>{{curso.nome}}</h2>
+        <p>{{curso.descricao}}</p>
+        <p>{{curso.valor}}</p>
+        <p>{{curso.alunos}}</p>
+        <button (click)="deleteCurso(curso.id)">Deletar curso</button>
+        <button (click)="updateCurso(curso.id)">Alterar curso</button>
+    </li>
+</ul>

@@ -1,0 +1,7 @@
+<h1>Lista Adocao</h1>
+
+<ul>
+  <li *ngFor="let p of listaAdocao">
+    <a [routerLink]="['/animal', p.id]">{{p.nome}} - {{p.tipo}} - {{p.idade}}</a>
+  </li>
+</ul>

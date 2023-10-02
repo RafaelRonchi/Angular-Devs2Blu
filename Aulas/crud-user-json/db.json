@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "Email": "senhor.pestana@gmail.com",
+      "Name": "João Pestana",
+      "Mobile": "(47) 9 9870 - 8876",
+      "Age": 25
+    },
+    {
+      "Name": "João abacate",
+      "Email": "senhor.pestana@gmail.com",
+      "Mobile": "(47) 9 9870 - 8876",
+      "Age": 25,
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

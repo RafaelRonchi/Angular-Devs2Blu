@@ -1,0 +1,25 @@
+<form action="" [formGroup]="carroForm" (ngSubmit)="cadastrarCarro()">
+
+  <input type="text" placeholder="Modelo" formControlName="modelo">
+  <input type="text" placeholder="Marca" formControlName="marca">
+  <input type="number" placeholder="Ano" formControlName="ano">
+
+  <button type="submit">{{tipo}}</button>
+  
+</form>
+
+<button (click)="pegarCarros()">Pegar Carros</button>
+
+<div class="container">
+  <ul>
+    <h3 *ngIf="!listaCarros">
+      Não há carros cadastrados
+    </h3>
+    
+    <li *ngFor="let carro of listaCarros;index as i" >
+      <h3>{{carro.id}}º -{{carro.modelo}} - {{carro.marca}} - {{carro.ano}}</h3>
+      <button (click)="atualizar(carro)" >Atualizar</button>
+      <button (click)="deletar(carro.id)" >X</button>
+    </li>
+  </ul>
+</div>
