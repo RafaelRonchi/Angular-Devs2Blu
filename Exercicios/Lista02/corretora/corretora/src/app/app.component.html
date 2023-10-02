@@ -1,0 +1,29 @@
+<form action="" [formGroup]="form"  (ngSubmit)="addImo()" style="margin: 20px;">
+  <h2>Cadastre uma imobiliaria!</h2>
+  <div class="mb-3">
+    <input type="text" placeholder="nome" formControlName="nome" class="form-control">
+  </div>
+  <div class="mb-3">
+  <input type="text" placeholder="codigo" formControlName="codigo" class="form-control">
+</div>
+  <div class="mb-3">
+  <input type="text" placeholder="logo (url)" formControlName="logo" class="form-control">
+</div>
+<div class="d-grid gap-2">
+  <button type="submit" class="btn btn-primary">Cadastrar imobiliariar</button>
+</div>
+</form>
+
+
+<h2 style="margin: 20px;">Lista de imobiliarias</h2>
+<ul style="display: flex;">
+    <li *ngFor="let l of listImo" class="card" style="width: 18rem; " style="margin: 20px;">
+      <img src="{{l.logo}}" alt="Imagem imobiliaria" class="card-img-top" style="width: 100%; height: 200px;">
+      <div class="card-body">
+        <h2 class="card-title">Nome: {{l.nome}}</h2>
+        <p class="card-text">Codigo: {{l.codigo}}</p>
+      </div>
+        <button (click)="delImo(l.id)" class="btn btn-danger">Deletar imobiliaria</button>
+        <button (click)="updateImo(l.id)" class="btn btn-warning">Alterar imobiliaria</button>
+    </li>
+</ul>
