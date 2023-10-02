@@ -11,8 +11,8 @@ export class AdocaoComponent implements OnInit {
 
   listaAdocao: any[] = []
   ngOnInit(): void {
-    this.service.getAdocao().subscribe((resposta: any) => {
-      this.listaAdocao = resposta
+    this.service.getAdocao().subscribe(res => {
+      this.listaAdocao = res
     })
   }
 }

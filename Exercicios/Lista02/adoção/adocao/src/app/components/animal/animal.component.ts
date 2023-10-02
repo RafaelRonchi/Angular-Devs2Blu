@@ -16,13 +16,15 @@ export class AnimalComponent implements OnInit {
     // Obtenha o valor do parâmetro ID da rota
     this.route.paramMap.subscribe(params => {
       this.animalId = params.get('id');
-      // Agora você pode usar this.animalId para acessar o ID do animal
+     this.getAnimal(this.animalId);
     });
   }
 
   getAnimal(id: number){
     this.service.getAdocaoById(id).subscribe((resposta: any) => {
+     console.log(
       this.animal = resposta
+      );
     })
 
 
