@@ -1,0 +1,14 @@
+<!-- faz um formulario de login pra mim -->
+<form action="">
+  <div class="mb-3">
+  <label for="name" class="form-label">Name</label>
+  <input [(ngModel)]="user.username" type="text" name="name" id="name" class="form-label">
+  </div>
+  <div class="mb-3">
+  <label for="password" class="form-label">Password</label>
+  <input [(ngModel)]="user.password" type="password" name="password" id="password" class="form-label">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="login(user)" >Login</button>
+  <button type="submit" class="btn btn-success" (click)="register(user)">Register</button>
+  <button type="submit" class="btn btn-warning" (click)="getMe()">Get name</button>
+</form>
